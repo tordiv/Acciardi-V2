@@ -51,12 +51,9 @@ body{
    trasparente sopra l'hero scuro: il cambio in corsa non convinceva). */
 #site-header{background-color:var(--c-cream);box-shadow:0 4px 24px rgba(26,26,24,.08);}
 
-#site-header .brand-icon,#site-header .brand-text{color:var(--c-primary);}
 #site-header .nav-link{color:rgba(26,26,24,.85);}
-#site-header .phone-link{color:var(--c-primary);}
 #site-header .menu-icon{color:var(--c-primary);}
 #site-header .nav-link:hover,#site-header .nav-link:focus-visible{color:var(--c-primary);}
-#site-header .phone-link:hover{color:var(--c-primary-dark);}
 
 .nav-link{position:relative;}
 .nav-link::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--c-accent);
@@ -82,6 +79,11 @@ body{
 .btn-outline:hover{background:rgba(255,255,255,.12);}
 .btn-whatsapp{background:#25543A;color:#fff;}
 .btn-whatsapp:hover{background:var(--c-primary-dark);box-shadow:0 12px 28px -8px rgba(37,84,58,.6);}
+
+/* Bottone "Chiama" dell'header: stessa forma del bottone WhatsApp di fianco, ma
+   trasparente con solo il bordo — per non competere con l'oro pieno del WhatsApp. */
+.btn-call{background:transparent;color:var(--c-primary);border:1.5px solid var(--c-primary);}
+.btn-call:hover{background:var(--c-primary);color:var(--c-cream);box-shadow:0 12px 28px -8px rgba(37,84,58,.35);}
 
 /* Hero parallax layers */
 .hero-parallax{position:absolute;inset:0;overflow:hidden;}
