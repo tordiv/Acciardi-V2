@@ -230,13 +230,13 @@ li:hover .timeline-dot{transform:scale(1.3);}
 .brand-marquee{position:relative;overflow:hidden;
   -webkit-mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
   mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);}
-.brand-marquee-track{display:flex;align-items:center;gap:3.25rem;width:max-content;
+.brand-marquee-track{display:flex;align-items:center;gap:3.75rem;width:max-content;
   animation:brandMarquee 34s linear infinite;}
 .brand-marquee:hover .brand-marquee-track{animation-play-state:paused;}
-.brand-marquee-item{flex:0 0 auto;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;
-  font-weight:700;font-size:1.05rem;letter-spacing:.06em;color:rgba(26,26,24,.36);
-  white-space:nowrap;transition:color .25s ease;cursor:default;}
-.brand-marquee-item:hover{color:var(--c-primary);}
+.brand-marquee-item{flex:0 0 auto;height:3.5rem;width:8.5rem;display:flex;align-items:center;justify-content:center;}
+.brand-marquee-logo{max-height:100%;max-width:100%;width:auto;height:auto;
+  filter:grayscale(1) opacity(.5);transition:filter .3s ease;}
+.brand-marquee-item:hover .brand-marquee-logo{filter:grayscale(0) opacity(1);}
 @keyframes brandMarquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
 /* Footer — link con micro-shift al hover */
