@@ -235,46 +235,6 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   });
 })();
 
-/* ---------- Card recensione Google: rivela una textarea, copia il testo e apre la pagina
-   della recensione (Google non supporta il pre-riempimento del testo via URL come wa.me). ---------- */
-(function reviewWidget() {
-  const toggleBtn = document.getElementById('review-toggle-btn');
-  const form = document.getElementById('review-form');
-  const textarea = document.getElementById('review-text');
-  const sendBtn = document.getElementById('review-send-btn');
-  const copiedMsg = document.getElementById('review-copied-msg');
-  if (!toggleBtn || !form || !textarea || !sendBtn) return;
-
-  const REVIEW_URL = 'https://g.page/r/CQOqnEyUnBXKEBM/review';
-
-  toggleBtn.addEventListener('click', () => {
-    const isOpen = !form.hidden;
-    if (isOpen) {
-      form.hidden = true;
-      toggleBtn.setAttribute('aria-expanded', 'false');
-    } else {
-      form.hidden = false;
-      toggleBtn.setAttribute('aria-expanded', 'true');
-      window.setTimeout(() => textarea.focus(), 50);
-    }
-  });
-
-  async function copyAndOpen() {
-    const text = textarea.value.trim();
-    if (copiedMsg) copiedMsg.hidden = true;
-    if (text && navigator.clipboard) {
-      try {
-        await navigator.clipboard.writeText(text);
-        if (copiedMsg) copiedMsg.hidden = false;
-      } catch (e) {
-        /* Clipboard non disponibile (permessi/browser): si apre comunque la pagina della recensione. */
-      }
-    }
-    window.open(REVIEW_URL, '_blank', 'noopener');
-  }
-  sendBtn.addEventListener('click', copyAndOpen);
-})();
-
 /* ---------- Count-up statistiche (indipendente da GSAP: funziona anche se GSAP non carica) ---------- */
 function initCounters() {
   const counters = document.querySelectorAll('[data-count]');

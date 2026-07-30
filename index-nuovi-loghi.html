@@ -290,11 +290,8 @@
           <path d="M330 498 V416 M330 416 l-14 -24 M330 416 l14 -24 M330 446 l-11 -8 M330 464 l11 -8"/>
         </g>
 
-        <circle cx="300" cy="210" r="86" fill="#25543A"/>
+        <image href="assets/img/simbolo-badge-social.png" x="214" y="124" width="172" height="172"/>
         <circle cx="300" cy="210" r="94" fill="none" stroke="#D6A138" stroke-width="1.5" opacity="0.4"/>
-        <path d="M300 150 L262 268 L282 268 L300 200 Z" fill="#F7F3EA"/>
-        <path d="M300 150 L338 268 L318 268 L300 200 Z" fill="#F7F3EA"/>
-        <rect x="284" y="228" width="32" height="12" rx="3" fill="#D6A138"/>
         <text x="300" y="330" text-anchor="middle" font-family="Lora, serif" font-weight="700" font-size="26" fill="#25543A">Dal padre</text>
         <text x="300" y="362" text-anchor="middle" font-family="Lora, serif" font-weight="700" font-size="26" fill="#193A28">al figlio</text>
 
@@ -541,7 +538,7 @@
         <iframe
           id="map-iframe"
           class="map-frame hidden w-full h-full min-h-[320px]"
-          data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160000!2d15.027033589032607!3d39.80568696666108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133f547c0794aab1%3A0xca159c944c9caa03!2sCereali%20-%20Fertilizzanti%20-%20Materiale%20da%20costruzine.!5e0!3m2!1sit!2sit!4v1785420751562!5m2!1sit!2sit"
+          data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120000!2d15.027033589032607!3d39.80568696666108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133f547c0794aab1%3A0xca159c944c9caa03!2sCereali%20-%20Fertilizzanti%20-%20Materiale%20da%20costruzine.!5e0!3m2!1sit!2sit!4v1785420751562!5m2!1sit!2sit"
           title="Posizione Acciardi su Google Maps"
           loading="lazy"
           referrerpolicy="strict-origin-when-cross-origin"
@@ -560,21 +557,10 @@
         </div>
         <p class="font-serif font-semibold text-lg text-cream mb-1">Ti sei trovato bene da noi?</p>
         <p class="text-sm text-cream/75 mb-5 leading-relaxed">Raccontalo con una recensione su Google: ci aiuta a farci conoscere da altri clienti della zona.</p>
-
-        <button type="button" id="review-toggle-btn" aria-expanded="false" aria-controls="review-form" class="btn btn-outline text-sm w-full sm:w-auto">
+        <a href="https://g.page/r/CQOqnEyUnBXKEBM/review" target="_blank" rel="noopener" class="btn btn-outline text-sm w-full sm:w-auto">
           <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.2 21 L12 17.3 L5.8 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
-          Scrivi una recensione
-        </button>
-
-        <div id="review-form" class="review-form" hidden>
-          <label for="review-text" class="block text-xs text-cream/60 mt-4 mb-2">Scrivi qui la tua recensione: la copiamo per te, dovrai solo incollarla nella pagina di Google che si apre.</label>
-          <textarea id="review-text" class="review-textarea" rows="4" placeholder="Es. Personale gentile e disponibile, prodotti di qualità, consiglio!"></textarea>
-          <button type="button" id="review-send-btn" class="btn btn-primary text-sm w-full mt-3">
-            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            Copia e apri Google
-          </button>
-          <p id="review-copied-msg" class="text-xs text-accent mt-2" hidden>Testo copiato! Incollalo nella pagina che si è appena aperta.</p>
-        </div>
+          Lascia una recensione
+        </a>
       </div>
     </div>
   </div>
