@@ -2,18 +2,6 @@ document.documentElement.classList.add('js');
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ---------- Header scroll state ---------- */
-const header = document.getElementById('site-header');
-const hero = document.getElementById('hero');
-const onScroll = () => {
-  const threshold = hero ? hero.offsetHeight - 96 : 24;
-  if (window.scrollY > threshold) header.classList.add('is-scrolled');
-  else header.classList.remove('is-scrolled');
-};
-onScroll();
-window.addEventListener('scroll', onScroll, { passive: true });
-window.addEventListener('resize', onScroll);
-
 /* ---------- Mobile menu ---------- */
 const menuBtn = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');

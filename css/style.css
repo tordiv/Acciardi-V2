@@ -47,37 +47,19 @@ body{
 .peak-divider{display:block;width:100%;height:auto;line-height:0;}
 .peak-divider svg{display:block;width:100%;height:60px;}
 
-/* Header — trasparente su hero scuro (testo chiaro), opaco e chiaro appena si scrolla (testo scuro) */
-#site-header{transition:background-color .4s var(--ease-organic), box-shadow .4s var(--ease-organic), padding .4s var(--ease-organic);}
-#site-header.is-scrolled{background-color:var(--c-cream);box-shadow:0 4px 24px rgba(26,26,24,.08);}
+/* Header — sempre chiaro/opaco fin da subito, non solo dopo lo scroll (in precedenza era
+   trasparente sopra l'hero scuro: il cambio in corsa non convinceva). */
+#site-header{background-color:var(--c-cream);box-shadow:0 4px 24px rgba(26,26,24,.08);}
 
-#site-header .brand-icon{color:var(--c-paper);transition:color .3s ease;}
-#site-header .brand-text{color:var(--c-paper);transition:color .3s ease;}
-#site-header .nav-link{color:var(--c-paper);transition:color .3s ease;}
-#site-header .phone-link{color:var(--c-paper);transition:color .3s ease;}
-#site-header .menu-icon{color:var(--c-paper);transition:color .3s ease;}
+#site-header .brand-icon,#site-header .brand-text{color:var(--c-primary);}
+#site-header .nav-link{color:rgba(26,26,24,.85);}
+#site-header .phone-link{color:var(--c-primary);}
+#site-header .menu-icon{color:var(--c-primary);}
+#site-header .nav-link:hover,#site-header .nav-link:focus-visible{color:var(--c-primary);}
+#site-header .phone-link:hover{color:var(--c-primary-dark);}
 
-#site-header .nav-link:hover,#site-header .nav-link:focus-visible,
-#site-header .phone-link:hover,#site-header .phone-link:focus-visible{color:var(--c-accent);}
-
-#site-header.is-scrolled .brand-icon,
-#site-header.is-scrolled .brand-text{color:var(--c-primary);}
-#site-header.is-scrolled .nav-link{color:rgba(26,26,24,.85);}
-#site-header.is-scrolled .phone-link{color:var(--c-primary);}
-#site-header.is-scrolled .menu-icon{color:var(--c-primary);}
-#site-header.is-scrolled .nav-link:hover,#site-header.is-scrolled .nav-link:focus-visible{color:var(--c-primary);}
-#site-header.is-scrolled .phone-link:hover{color:var(--c-primary-dark);}
-
-/* Solo in index-nuovi-loghi.html: logo ufficiale in entrambe le varianti del manuale del
-   marchio — bianca sopra l'hero scuro, a colori una volta scrollato su sfondo chiaro.
-   Le due immagini sono sovrapposte e passano dall'una all'altra in dissolvenza incrociata,
-   con la stessa durata/curva della transizione di sfondo dell'header (vedi #site-header
-   qui sopra), invece di scambiarsi di scatto: evita il momento di scarso contrasto a metà
-   scroll in cui il logo era già cambiato ma lo sfondo ancora a metà tra scuro e chiaro. */
-.brand-mark-dark,.brand-mark-light{transition:opacity .4s var(--ease-organic);}
-.brand-mark-light{opacity:0;}
-#site-header.is-scrolled .brand-mark-dark{opacity:0;}
-#site-header.is-scrolled .brand-mark-light{opacity:1;}
+/* Solo in index-nuovi-loghi.html: con l'header sempre chiaro, il marchio mostra
+   sempre e solo la variante ufficiale a colori (niente più dissolvenza con la bianca). */
 
 .nav-link{position:relative;}
 .nav-link::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--c-accent);
