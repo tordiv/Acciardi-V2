@@ -68,9 +68,10 @@ body{
 #site-header.is-scrolled .nav-link:hover,#site-header.is-scrolled .nav-link:focus-visible{color:var(--c-primary);}
 #site-header.is-scrolled .phone-link:hover{color:var(--c-primary-dark);}
 
-/* Solo in index-nuovi-loghi.html: sopra l'hero scuro si vede il marchio disegnato inline
-   (si adatta al bianco via currentColor); una volta scrollato, sfondo chiaro, si mostra il
-   logo ufficiale a colori — i loghi forniti sono pensati per sfondi chiari, non per l'hero scuro. */
+/* Solo in index-nuovi-loghi.html: logo ufficiale in entrambe le varianti del manuale del
+   marchio — bianca (logo-orizzontale-bianco.png) sopra l'hero scuro, a colori una volta
+   scrollato su sfondo chiaro. Stesso identico lockup usato anche nel footer e come icona
+   dell'hero (simbolo-bianco.png), per coerenza in tutto il sito. */
 .brand-mark-light{display:none;}
 #site-header.is-scrolled .brand-mark-dark{display:none;}
 #site-header.is-scrolled .brand-mark-light{display:block;}

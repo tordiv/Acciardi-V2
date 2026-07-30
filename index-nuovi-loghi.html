@@ -92,16 +92,9 @@
 <header id="site-header" class="fixed top-0 inset-x-0 z-40 bg-transparent">
   <div class="max-w-container mx-auto px-5 sm:px-8 flex items-center justify-between h-20">
     <a href="#hero" class="brand-link items-center gap-3 shrink-0" aria-label="Acciardi — torna in cima">
-      <!-- Sopra l'hero scuro: icona+testo disegnati inline (currentColor si adatta al bianco). -->
-      <span class="brand-mark-dark inline-flex items-center gap-3">
-        <svg viewBox="0 0 200 200" class="w-9 h-9 brand-icon" aria-hidden="true">
-          <path d="M100 20 L55 180 L80 180 L100 74 Z" fill="currentColor"/>
-          <path d="M100 20 L145 180 L120 180 L100 74 Z" fill="currentColor"/>
-          <rect x="76" y="108" width="48" height="17" rx="4" fill="#D6A138"/>
-        </svg>
-        <span class="brand-text font-serif font-bold text-xl tracking-wide leading-none">ACCIARDI</span>
-      </span>
-      <!-- Header scrollato, sfondo chiaro: logo ufficiale a colori. -->
+      <!-- Logo ufficiale, in entrambe le versioni previste dal manuale del marchio:
+           bianca su fondo scuro (sopra l'hero) e a colori su fondo chiaro (header scrollato). -->
+      <img src="assets/img/logo-orizzontale-bianco.png" alt="Acciardi" class="brand-mark-dark h-8 w-auto">
       <img src="assets/img/logo-orizzontale-colore.png" alt="Acciardi" class="brand-mark-light h-8 w-auto">
     </a>
 
@@ -181,11 +174,7 @@
     <div class="hero-icon reveal flex justify-center mb-8 sm:mb-10" aria-hidden="true">
       <span class="hero-icon-badge relative inline-flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-full bg-cream/10 ring-1 ring-cream/30 shadow-soft backdrop-blur-sm">
         <span class="hero-icon-arrival-ring absolute inset-0 rounded-full"></span>
-        <svg viewBox="0 0 200 200" class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20">
-          <path d="M100 20 L55 180 L80 180 L100 74 Z" fill="#FFFFFF"/>
-          <path d="M100 20 L145 180 L120 180 L100 74 Z" fill="#FFFFFF"/>
-          <rect x="76" y="108" width="48" height="17" rx="4" fill="#D6A138"/>
-        </svg>
+        <img src="assets/img/simbolo-bianco.png" alt="" class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20">
       </span>
     </div>
     <p class="hero-eyebrow reveal font-semibold tracking-[0.2em] text-accent text-xs sm:text-sm uppercase mb-5">
@@ -595,13 +584,8 @@
 <footer class="bg-primary-dark text-cream/80">
   <div class="max-w-container mx-auto px-5 sm:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
     <div>
-      <a href="#hero" class="flex items-center gap-3 mb-4">
-        <svg viewBox="0 0 200 200" class="w-8 h-8" aria-hidden="true">
-          <path d="M100 20 L55 180 L80 180 L100 74 Z" fill="#FFFFFF"/>
-          <path d="M100 20 L145 180 L120 180 L100 74 Z" fill="#FFFFFF"/>
-          <rect x="76" y="108" width="48" height="17" rx="4" fill="#D6A138"/>
-        </svg>
-        <span class="font-serif font-bold text-lg text-cream">ACCIARDI</span>
+      <a href="#hero" class="flex items-center mb-4">
+        <img src="assets/img/logo-orizzontale-bianco.png" alt="Acciardi" class="h-8 w-auto">
       </a>
       <p class="text-sm leading-relaxed">Cereali · Fertilizzanti · Materiali da Costruzione<br>Oriolo (CS) — una tradizione di famiglia da oltre 50 anni.</p>
     </div>
