@@ -1,9 +1,8 @@
-/* Config di build per Tailwind CSS — genera css/tailwind.css a partire da index.html
-   e index-nuovi-loghi.html (versione alternativa con i loghi ufficiali).
+/* Config di build per Tailwind CSS — genera css/tailwind.css a partire da index.html.
    Rilancia con: npx tailwindcss -i tailwind-input.css -o css/tailwind.css -c tailwind.config.js --minify
-   ogni volta che cambiano le classi usate in uno dei due file. */
+   ogni volta che cambiano le classi usate in index.html. */
 module.exports = {
-  content: ["./index.html", "./index-nuovi-loghi.html"],
+  content: ["./index.html"],
   theme: {
     extend: {
       colors: {

@@ -10,11 +10,13 @@
 <!-- <link rel="canonical" href="https://www.acciardi-oriolo.it/"> -->
 
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="apple-touch-icon" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/simbolo-badge-social.png">
+<link rel="apple-touch-icon" href="assets/img/simbolo-badge-social.png">
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Acciardi — Oriolo (CS)">
 <meta name="twitter:description" content="Cereali, fertilizzanti, pellet e materiali da costruzione. Una tradizione di famiglia da oltre 50 anni.">
+<meta name="twitter:image" content="assets/img/logo-completo-colore.png">
 
 <script type="application/ld+json">
 {
@@ -51,6 +53,11 @@
 <meta property="og:title" content="Acciardi — Oriolo (CS)">
 <meta property="og:description" content="Cereali, fertilizzanti, pellet e materiali da costruzione. Una tradizione di famiglia da oltre 50 anni.">
 <meta property="og:type" content="website">
+<!-- TODO: come per il canonical, va reso un URL assoluto (es. https://www.acciardi-oriolo.it/assets/img/...)
+     appena il sito avrà un dominio proprio: i crawler social non risolvono percorsi relativi. -->
+<meta property="og:image" content="assets/img/logo-completo-colore.png">
+<meta property="og:image:width" content="3500">
+<meta property="og:image:height" content="1120">
 
 <!-- Fallback senza JavaScript: se lo script viene bloccato (es. anteprima rapida di WhatsApp/Mail),
      l'hero entra comunque in scena con una semplice animazione CSS. Invisibile ai browser normali. -->
@@ -82,13 +89,9 @@
 <!-- ============ HEADER ============ -->
 <header id="site-header" class="fixed top-0 inset-x-0 z-40 bg-transparent">
   <div class="max-w-container mx-auto px-5 sm:px-8 flex items-center justify-between h-20">
-    <a href="#hero" class="brand-link items-center gap-3 shrink-0" aria-label="Acciardi — torna in cima">
-      <svg viewBox="0 0 200 200" class="w-9 h-9 brand-icon" aria-hidden="true">
-        <path d="M100 20 L55 180 L80 180 L100 74 Z" fill="currentColor"/>
-        <path d="M100 20 L145 180 L120 180 L100 74 Z" fill="currentColor"/>
-        <rect x="76" y="108" width="48" height="17" rx="4" fill="#D6A138"/>
-      </svg>
-      <span class="brand-text font-serif font-bold text-xl tracking-wide leading-none">ACCIARDI</span>
+    <a href="#hero" class="brand-link items-center shrink-0" aria-label="Acciardi — torna in cima">
+      <!-- Header sempre chiaro: logo ufficiale a colori, un'unica versione fissa. -->
+      <img src="assets/img/logo-completo-colore.png" alt="Acciardi — Cereali, Fertilizzanti, Materiali da Costruzione, Oriolo (CS)" class="h-14 w-auto">
     </a>
 
     <nav class="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-sm">
@@ -167,11 +170,7 @@
     <div class="hero-icon reveal flex justify-center mb-8 sm:mb-10" aria-hidden="true">
       <span class="hero-icon-badge relative inline-flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-full bg-cream/10 ring-1 ring-cream/30 shadow-soft backdrop-blur-sm">
         <span class="hero-icon-arrival-ring absolute inset-0 rounded-full"></span>
-        <svg viewBox="0 0 200 200" class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20">
-          <path d="M100 20 L55 180 L80 180 L100 74 Z" fill="#FFFFFF"/>
-          <path d="M100 20 L145 180 L120 180 L100 74 Z" fill="#FFFFFF"/>
-          <rect x="76" y="108" width="48" height="17" rx="4" fill="#D6A138"/>
-        </svg>
+        <img src="assets/img/simbolo-bianco.png" alt="" class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20">
       </span>
     </div>
     <p class="hero-eyebrow reveal font-semibold tracking-[0.2em] text-accent text-xs sm:text-sm uppercase mb-5">
@@ -312,11 +311,8 @@
           <path d="M330 498 V416 M330 451 l9 -9 M330 451 l-9 -9 M330 440 l9 -9 M330 440 l-9 -9 M330 430 l9 -9 M330 430 l-9 -9 M330 419 l9 -9 M330 419 l-9 -9"/>
         </g>
 
-        <circle cx="300" cy="210" r="86" fill="#25543A"/>
+        <image href="assets/img/simbolo-badge-social.png" x="214" y="124" width="172" height="172"/>
         <circle cx="300" cy="210" r="94" fill="none" stroke="#D6A138" stroke-width="1.5" opacity="0.4"/>
-        <path d="M300 150 L262 268 L282 268 L300 200 Z" fill="#F7F3EA"/>
-        <path d="M300 150 L338 268 L318 268 L300 200 Z" fill="#F7F3EA"/>
-        <rect x="284" y="228" width="32" height="12" rx="3" fill="#D6A138"/>
         <text x="300" y="330" text-anchor="middle" font-family="Lora, serif" font-weight="700" font-size="26" fill="#25543A">Dal padre</text>
         <text x="300" y="362" text-anchor="middle" font-family="Lora, serif" font-weight="700" font-size="26" fill="#193A28">al figlio</text>
 
@@ -595,15 +591,10 @@
 <footer class="bg-primary-dark text-cream/80">
   <div class="max-w-container mx-auto px-5 sm:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
     <div>
-      <a href="#hero" class="flex items-center gap-3 mb-4">
-        <svg viewBox="0 0 200 200" class="w-8 h-8" aria-hidden="true">
-          <path d="M100 20 L55 180 L80 180 L100 74 Z" fill="#FFFFFF"/>
-          <path d="M100 20 L145 180 L120 180 L100 74 Z" fill="#FFFFFF"/>
-          <rect x="76" y="108" width="48" height="17" rx="4" fill="#D6A138"/>
-        </svg>
-        <span class="font-serif font-bold text-lg text-cream">ACCIARDI</span>
+      <a href="#hero" class="flex items-center mb-4">
+        <img src="assets/img/logo-completo-bianco.png" alt="Acciardi — Cereali, Fertilizzanti, Materiali da Costruzione, Oriolo (CS)" class="h-14 w-auto">
       </a>
-      <p class="text-sm leading-relaxed">Cereali · Fertilizzanti · Materiali da Costruzione<br>Oriolo (CS) — una tradizione di famiglia da oltre 50 anni.</p>
+      <p class="text-sm leading-relaxed">Una tradizione di famiglia da oltre 50 anni.</p>
     </div>
     <div>
       <p class="font-semibold text-cream mb-4 text-sm uppercase tracking-wide">Naviga</p>

@@ -58,9 +58,6 @@ body{
 #site-header .nav-link:hover,#site-header .nav-link:focus-visible{color:var(--c-primary);}
 #site-header .phone-link:hover{color:var(--c-primary-dark);}
 
-/* Solo in index-nuovi-loghi.html: con l'header sempre chiaro, il marchio mostra
-   sempre e solo la variante ufficiale a colori (niente più dissolvenza con la bianca). */
-
 .nav-link{position:relative;}
 .nav-link::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--c-accent);
   transform:scaleX(0);transform-origin:right;transition:transform .3s var(--ease-organic);}
