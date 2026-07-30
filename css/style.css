@@ -224,6 +224,21 @@ li:hover .timeline-dot{transform:scale(1.3);}
 .wa-popup-textarea:focus-visible{outline:none;border-color:var(--c-accent);}
 .wa-popup-send-btn{width:100%;font-size:.9rem;padding:.75rem 1rem;}
 
+/* Striscia marchi trattati — scorrimento orizzontale continuo, si ferma al hover e
+   rispetta prefers-reduced-motion tramite la regola globale in cima al file.
+   Sfumatura ai bordi tramite mask-image invece di un semplice overflow:hidden secco. */
+.brand-marquee{position:relative;overflow:hidden;
+  -webkit-mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);}
+.brand-marquee-track{display:flex;align-items:center;gap:3.25rem;width:max-content;
+  animation:brandMarquee 34s linear infinite;}
+.brand-marquee:hover .brand-marquee-track{animation-play-state:paused;}
+.brand-marquee-item{flex:0 0 auto;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;
+  font-weight:700;font-size:1.05rem;letter-spacing:.06em;color:rgba(26,26,24,.36);
+  white-space:nowrap;transition:color .25s ease;cursor:default;}
+.brand-marquee-item:hover{color:var(--c-primary);}
+@keyframes brandMarquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
 /* Footer — link con micro-shift al hover */
 footer a{transition:color .25s ease, transform .25s var(--ease-organic);display:inline-block;}
 footer ul a:hover{transform:translateX(3px);}
