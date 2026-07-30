@@ -177,16 +177,35 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const PHONE = '393475388984';
   const DEFAULT_MESSAGE = 'Ciao, vorrei avere informazioni sui vostri prodotti.';
+  let closeTimer = null;
 
+  function cancelScheduledClose() {
+    if (closeTimer) {
+      window.clearTimeout(closeTimer);
+      closeTimer = null;
+    }
+  }
   function openPopup() {
+    cancelScheduledClose();
     widget.classList.add('is-open');
     floatBtn.setAttribute('aria-expanded', 'true');
     window.setTimeout(() => textarea.focus(), 50);
   }
   function closePopup() {
+    cancelScheduledClose();
     widget.classList.remove('is-open');
     floatBtn.setAttribute('aria-expanded', 'false');
   }
+  function scheduleClose() {
+    cancelScheduledClose();
+    closeTimer = window.setTimeout(closePopup, 220);
+  }
+
+  /* Hover del mouse: apre/chiude con un piccolo ritardo, per non chiudersi mentre
+     il cursore attraversa lo spazio vuoto tra bottone e popup (il popup è staccato
+     visivamente dal bottone tramite position:absolute). */
+  widget.addEventListener('mouseenter', openPopup);
+  widget.addEventListener('mouseleave', scheduleClose);
 
   floatBtn.addEventListener('click', () => {
     if (widget.classList.contains('is-open')) closePopup();
