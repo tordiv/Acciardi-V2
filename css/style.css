@@ -216,6 +216,18 @@ li:hover .timeline-dot{transform:scale(1.3);}
 .wa-popup-textarea:focus-visible{outline:none;border-color:var(--c-accent);}
 .wa-popup-send-btn{width:100%;font-size:.9rem;padding:.75rem 1rem;}
 
+/* Card recensione Google — stesso schema del popup WhatsApp (bottone che rivela una
+   textarea + invio), ma inline nella card invece che in overlay: il link di Google
+   non supporta il pre-riempimento del testo via URL come wa.me, quindi il testo
+   scritto qui viene copiato negli appunti prima di aprire la pagina della recensione. */
+.review-form{animation:catPanelFade .3s ease;}
+@media (prefers-reduced-motion: reduce){.review-form{animation:none;}}
+.review-textarea{display:block;width:100%;resize:vertical;min-height:92px;border:1px solid rgba(247,243,234,.25);
+  border-radius:.6rem;padding:.65rem .75rem;font-family:inherit;font-size:.85rem;color:var(--c-cream);
+  background:rgba(255,255,255,.06);transition:border-color .2s ease;}
+.review-textarea::placeholder{color:rgba(247,243,234,.45);}
+.review-textarea:focus-visible{outline:none;border-color:var(--c-accent);}
+
 /* Footer — link con micro-shift al hover */
 footer a{transition:color .25s ease, transform .25s var(--ease-organic);display:inline-block;}
 footer ul a:hover{transform:translateX(3px);}
