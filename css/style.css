@@ -69,12 +69,15 @@ body{
 #site-header.is-scrolled .phone-link:hover{color:var(--c-primary-dark);}
 
 /* Solo in index-nuovi-loghi.html: logo ufficiale in entrambe le varianti del manuale del
-   marchio — bianca (logo-orizzontale-bianco.png) sopra l'hero scuro, a colori una volta
-   scrollato su sfondo chiaro. Stesso identico lockup usato anche nel footer e come icona
-   dell'hero (simbolo-bianco.png), per coerenza in tutto il sito. */
-.brand-mark-light{display:none;}
-#site-header.is-scrolled .brand-mark-dark{display:none;}
-#site-header.is-scrolled .brand-mark-light{display:block;}
+   marchio — bianca sopra l'hero scuro, a colori una volta scrollato su sfondo chiaro.
+   Le due immagini sono sovrapposte e passano dall'una all'altra in dissolvenza incrociata,
+   con la stessa durata/curva della transizione di sfondo dell'header (vedi #site-header
+   qui sopra), invece di scambiarsi di scatto: evita il momento di scarso contrasto a metà
+   scroll in cui il logo era già cambiato ma lo sfondo ancora a metà tra scuro e chiaro. */
+.brand-mark-dark,.brand-mark-light{transition:opacity .4s var(--ease-organic);}
+.brand-mark-light{opacity:0;}
+#site-header.is-scrolled .brand-mark-dark{opacity:0;}
+#site-header.is-scrolled .brand-mark-light{opacity:1;}
 
 .nav-link{position:relative;}
 .nav-link::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--c-accent);
