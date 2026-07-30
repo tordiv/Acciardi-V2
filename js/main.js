@@ -165,6 +165,57 @@ if (document.readyState === 'loading') {
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+/* ---------- Widget WhatsApp flottante: popup con messaggio personalizzabile ---------- */
+(function whatsappWidget() {
+  const widget = document.getElementById('wa-widget');
+  const floatBtn = document.getElementById('wa-float-btn');
+  const popup = document.getElementById('wa-popup');
+  const closeBtn = document.getElementById('wa-popup-close');
+  const textarea = document.getElementById('wa-popup-text');
+  const sendBtn = document.getElementById('wa-popup-send');
+  if (!widget || !floatBtn || !popup || !textarea || !sendBtn) return;
+
+  const PHONE = '393475388984';
+  const DEFAULT_MESSAGE = 'Ciao, vorrei avere informazioni sui vostri prodotti.';
+
+  function openPopup() {
+    widget.classList.add('is-open');
+    floatBtn.setAttribute('aria-expanded', 'true');
+    window.setTimeout(() => textarea.focus(), 50);
+  }
+  function closePopup() {
+    widget.classList.remove('is-open');
+    floatBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  floatBtn.addEventListener('click', () => {
+    if (widget.classList.contains('is-open')) closePopup();
+    else openPopup();
+  });
+  closeBtn.addEventListener('click', closePopup);
+
+  document.addEventListener('click', (e) => {
+    if (!widget.contains(e.target)) closePopup();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && widget.classList.contains('is-open')) closePopup();
+  });
+
+  function sendMessage() {
+    const message = textarea.value.trim() || DEFAULT_MESSAGE;
+    const url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(message);
+    window.open(url, '_blank', 'noopener');
+    closePopup();
+  }
+  sendBtn.addEventListener('click', sendMessage);
+  textarea.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+})();
+
 /* ---------- Count-up statistiche (indipendente da GSAP: funziona anche se GSAP non carica) ---------- */
 function initCounters() {
   const counters = document.querySelectorAll('[data-count]');
