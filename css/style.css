@@ -68,6 +68,13 @@ body{
 #site-header.is-scrolled .nav-link:hover,#site-header.is-scrolled .nav-link:focus-visible{color:var(--c-primary);}
 #site-header.is-scrolled .phone-link:hover{color:var(--c-primary-dark);}
 
+/* Solo in index-nuovi-loghi.html: sopra l'hero scuro si vede il marchio disegnato inline
+   (si adatta al bianco via currentColor); una volta scrollato, sfondo chiaro, si mostra il
+   logo ufficiale a colori — i loghi forniti sono pensati per sfondi chiari, non per l'hero scuro. */
+.brand-mark-light{display:none;}
+#site-header.is-scrolled .brand-mark-dark{display:none;}
+#site-header.is-scrolled .brand-mark-light{display:block;}
+
 .nav-link{position:relative;}
 .nav-link::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--c-accent);
   transform:scaleX(0);transform-origin:right;transition:transform .3s var(--ease-organic);}

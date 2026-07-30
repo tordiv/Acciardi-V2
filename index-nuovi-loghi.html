@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acciardi — Cereali, Fertilizzanti, Pellet e Materiali da Costruzione | Oriolo (CS)</title>
+<meta name="description" content="Ditta Acciardi Francesco: da oltre 50 anni a Oriolo (CS), cereali, fertilizzanti, pellet e materiali da costruzione. Consulenza di famiglia, tramandata da generazioni.">
+<meta name="theme-color" content="#25543A">
+<!-- TODO: sostituire con l'URL reale quando il sito avrà un dominio proprio -->
+<!-- <link rel="canonical" href="https://www.acciardi-oriolo.it/"> -->
+
+<!-- Versione alternativa: usa i nuovi loghi ufficiali forniti in assets/img/ al posto
+     dell'icona disegnata inline via SVG. Vedi index.html per la versione originale. -->
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/simbolo-badge-social.png">
+<link rel="apple-touch-icon" href="assets/img/simbolo-badge-social.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Acciardi — Oriolo (CS)">
+<meta name="twitter:description" content="Cereali, fertilizzanti, pellet e materiali da costruzione. Una tradizione di famiglia da oltre 50 anni.">
+<meta name="twitter:image" content="assets/img/logo-completo-colore.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Ditta Acciardi Francesco",
+  "description": "Cereali, fertilizzanti, pellet e materiali da costruzione a Oriolo (CS). Attività di famiglia da oltre 50 anni, tramandata di padre in figlio.",
+  "telephone": "+393475388984",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Oriolo",
+    "addressRegion": "CS",
+    "addressCountry": "IT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.0527584,
+    "longitude": 16.4471388
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "12:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "15:00", "closes": "18:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "07:00", "closes": "12:30" }
+  ]
+}
+</script>
+
+<!-- Google Fonts NON caricato staticamente: viene iniettato via JS solo dopo il consenso ai
+     servizi di terze parti (vedi cookie banner). Prima del consenso si usano i font di sistema
+     già previsti come fallback in tailwind.config (vedi <script> più in basso). -->
+
+<!-- Open Graph -->
+<meta property="og:title" content="Acciardi — Oriolo (CS)">
+<meta property="og:description" content="Cereali, fertilizzanti, pellet e materiali da costruzione. Una tradizione di famiglia da oltre 50 anni.">
+<meta property="og:type" content="website">
+<!-- TODO: come per il canonical, va reso un URL assoluto (es. https://www.acciardi-oriolo.it/assets/img/...)
+     appena il sito avrà un dominio proprio: i crawler social non risolvono percorsi relativi. -->
+<meta property="og:image" content="assets/img/logo-completo-colore.png">
+<meta property="og:image:width" content="3500">
+<meta property="og:image:height" content="1120">
+
+<!-- Fallback senza JavaScript: se lo script viene bloccato (es. anteprima rapida di WhatsApp/Mail),
+     l'hero entra comunque in scena con una semplice animazione CSS. Invisibile ai browser normali. -->
+<noscript>
+<style>
+  .hero-icon,.hero-eyebrow,.hero-title,.hero-sub,.hero-cta{opacity:0;animation:noscriptFadeUp .8s ease-out forwards;}
+  .hero-icon{animation-name:noscriptIconIn;animation-duration:1s;animation-delay:.05s;}
+  .hero-eyebrow{animation-delay:.35s;}
+  .hero-title{animation-delay:.5s;}
+  .hero-sub{animation-delay:.68s;}
+  .hero-cta{animation-delay:.85s;}
+  @keyframes noscriptFadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+  @keyframes noscriptIconIn{0%{opacity:0;transform:scale(.4) rotate(-20deg);}70%{opacity:1;transform:scale(1.06) rotate(2deg);}100%{opacity:1;transform:scale(1) rotate(0);}}
+</style>
+</noscript>
+
+<!-- CSS Tailwind compilato staticamente in fase di build (vedi tailwind.config.js) —
+     niente più JIT via CDN a runtime: più veloce e adatto alla produzione. -->
+<link rel="stylesheet" href="css/tailwind.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=16">
+</head>
+<body class="antialiased bg-cream text-ink">
+
+<!-- Filigrana su tutto il sito: motivo del tetto/montagna del logo ripetuto, sottilissimo -->
+<div class="site-filigree" aria-hidden="true"></div>
+
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-40 bg-transparent">
+  <div class="max-w-container mx-auto px-5 sm:px-8 flex items-center justify-between h-20">
+    <a href="#hero" class="brand-link items-center gap-3 shrink-0" aria-label="Acciardi — torna in cima">
+      <!-- Sopra l'hero scuro: icona+testo disegnati inline (currentColor si adatta al bianco). -->
+      <span class="brand-mark-dark inline-flex items-center gap-3">
+        <svg viewBox="0 0 200 200" class="w-9 h-9 brand-icon" aria-hidden="true">
+          <path d="M100 20 L55 180 L80 180 L100 74 Z" fill="currentColor"/>
+          <path d="M100 20 L145 180 L120 180 L100 74 Z" fill="currentColor"/>
+          <rect x="76" y="108" width="48" height="17" rx="4" fill="#D6A138"/>
+        </svg>
+        <span class="brand-text font-serif font-bold text-xl tracking-wide leading-none">ACCIARDI</span>
+      </span>
+      <!-- Header scrollato, sfondo chiaro: logo ufficiale a colori. -->
+      <img src="assets/img/logo-orizzontale-colore.png" alt="Acciardi" class="brand-mark-light h-8 w-auto">
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-sm">
+      <a href="#storia" class="nav-link">La storia</a>
+      <a href="#catalogo" class="nav-link">Catalogo</a>
+      <a href="#valori" class="nav-link">Perché noi</a>
+      <a href="#contatti" class="nav-link">Contatti</a>
+    </nav>
+
+    <div class="hidden lg:flex items-center gap-3">
+      <a href="tel:+393475388984" class="phone-link text-sm font-semibold">347 538 8984</a>
+      <a href="https://wa.me/393475388984?text=Ciao%2C%20vorrei%20avere%20informazioni%20sui%20vostri%20prodotti."
+         target="_blank" rel="noopener" class="btn btn-primary text-sm !py-2.5 !px-4">
+        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.48 1.33 5L2 22l5.15-1.35A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.18a8.14 8.14 0 0 1-4.15-1.14l-.3-.18-3.06.8.82-2.99-.2-.31a8.18 8.18 0 1 1 6.89 3.82Zm4.48-6.13c-.25-.12-1.45-.72-1.67-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.24.25-.4.08-.16.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.66.31-.22.24-.86.85-.86 2.06 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.45-.59 1.65-1.17.21-.57.21-1.06.14-1.16-.06-.11-.23-.17-.48-.29Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+
+    <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="menu-icon lg:hidden p-2 -mr-2" aria-label="Apri il menu">
+      <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu flex flex-col lg:hidden bg-cream border-t border-ink/10 px-5 gap-1 shadow-soft">
+    <a href="#storia" class="py-3 font-medium border-b border-ink/10">La storia</a>
+    <a href="#catalogo" class="py-3 font-medium border-b border-ink/10">Catalogo</a>
+    <a href="#valori" class="py-3 font-medium border-b border-ink/10">Perché noi</a>
+    <a href="#contatti" class="py-3 font-medium border-b border-ink/10">Contatti</a>
+    <a href="tel:+393475388984" class="py-3 font-semibold text-primary">Chiama: 347 538 8984</a>
+    <a href="https://wa.me/393475388984?text=Ciao%2C%20vorrei%20avere%20informazioni%20sui%20vostri%20prodotti." target="_blank" rel="noopener" class="btn btn-primary mt-2 w-full">Scrivici su WhatsApp</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="relative min-h-[100dvh] flex items-end overflow-hidden bg-primary-dark">
+  <div class="hero-parallax" aria-hidden="true">
+    <svg class="hero-layer" data-speed="-4" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" style="height:100%">
+      <defs>
+        <radialGradient id="sky" cx="72%" cy="18%" r="70%">
+          <stop offset="0%" stop-color="#3A7A54"/>
+          <stop offset="55%" stop-color="#234A34"/>
+          <stop offset="100%" stop-color="#152F20"/>
+        </radialGradient>
+      </defs>
+      <rect width="1600" height="900" fill="url(#sky)"/>
+      <circle cx="1180" cy="190" r="120" fill="#D6A138" opacity="0.9"/>
+    </svg>
+    <svg class="hero-layer" data-speed="-9" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" style="height:100%">
+      <path d="M0 620 Q 260 500 560 600 T 1120 560 T 1600 610 V900 H0 Z" fill="#1E4530"/>
+      <g fill="none" stroke="#D6A138" stroke-width="2" opacity="0.3">
+        <path d="M420 592 L436 566 L452 592"/>
+        <path d="M700 570 L716 544 L732 570"/>
+        <path d="M980 588 L996 562 L1012 588"/>
+        <path d="M1260 578 L1276 552 L1292 578"/>
+      </g>
+    </svg>
+    <svg class="hero-layer" data-speed="-15" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" style="height:100%">
+      <path d="M0 700 Q 300 600 620 680 T 1180 650 T 1600 700 V900 H0 Z" fill="#25543A"/>
+    </svg>
+    <svg class="hero-layer" data-speed="-24" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" style="height:100%">
+      <path d="M0 800 Q 400 760 800 800 T 1600 790 V900 H0 Z" fill="#193A28"/>
+      <g stroke="#D6A138" stroke-width="3" stroke-linecap="round" opacity="0.55">
+        <path d="M120 800 V755 M120 755 l-10 -18 M120 755 l10 -18"/>
+        <path d="M190 812 V767 M190 767 l-10 -18 M190 767 l10 -18"/>
+        <path d="M260 802 V757 M260 757 l-10 -18 M260 757 l10 -18"/>
+        <path d="M1340 806 V761 M1340 761 l-10 -18 M1340 761 l10 -18"/>
+        <path d="M1410 796 V751 M1410 751 l-10 -18 M1410 751 l10 -18"/>
+        <path d="M1480 806 V761 M1480 761 l-10 -18 M1480 761 l10 -18"/>
+      </g>
+    </svg>
+    <div class="grain-overlay"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/40 to-transparent"></div>
+  </div>
+
+  <div class="relative z-10 max-w-container mx-auto px-5 sm:px-8 pb-20 pt-32 sm:pt-36 w-full text-cream">
+    <div class="hero-icon reveal flex justify-center mb-8 sm:mb-10" aria-hidden="true">
+      <span class="hero-icon-badge relative inline-flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-full bg-cream/10 ring-1 ring-cream/30 shadow-soft backdrop-blur-sm">
+        <span class="hero-icon-arrival-ring absolute inset-0 rounded-full"></span>
+        <svg viewBox="0 0 200 200" class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20">
+          <path d="M100 20 L55 180 L80 180 L100 74 Z" fill="#FFFFFF"/>
+          <path d="M100 20 L145 180 L120 180 L100 74 Z" fill="#FFFFFF"/>
+          <rect x="76" y="108" width="48" height="17" rx="4" fill="#D6A138"/>
+        </svg>
+      </span>
+    </div>
+    <p class="hero-eyebrow reveal font-semibold tracking-[0.2em] text-accent text-xs sm:text-sm uppercase mb-5">
+      Una tradizione di famiglia · da oltre 50 anni · Oriolo (CS)
+    </p>
+    <h1 class="hero-title reveal font-serif font-bold text-5xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.03] max-w-3xl mb-6">
+      La terra e le tue opere meritano chi le conosce da <em class="italic text-accent font-normal">una vita</em>.
+    </h1>
+    <p class="hero-sub reveal text-cream/85 text-base sm:text-lg max-w-2xl mb-9 leading-relaxed">
+      Cereali &amp; mangimi, fertilizzanti, pellet e materiali da costruzione: tutto quello che serve al campo e al cantiere, con la consulenza di una famiglia che lavora a Oriolo da generazioni.
+    </p>
+    <div class="hero-cta reveal flex flex-wrap gap-4">
+      <a href="https://wa.me/393475388984?text=Ciao%2C%20vorrei%20avere%20informazioni%20sui%20vostri%20prodotti."
+         target="_blank" rel="noopener" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.48 1.33 5L2 22l5.15-1.35A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.18a8.14 8.14 0 0 1-4.15-1.14l-.3-.18-3.06.8.82-2.99-.2-.31a8.18 8.18 0 1 1 6.89 3.82Zm4.48-6.13c-.25-.12-1.45-.72-1.67-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.24.25-.4.08-.16.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.66.31-.22.24-.86.85-.86 2.06 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.45-.59 1.65-1.17.21-.57.21-1.06.14-1.16-.06-.11-.23-.17-.48-.29Z"/></svg>
+        Scrivici su WhatsApp
+      </a>
+      <a href="#catalogo" class="btn btn-outline">Scopri il catalogo</a>
+    </div>
+  </div>
+
+  <a href="#storia" aria-label="Scorri per saperne di più" class="hidden sm:flex absolute bottom-6 right-6 z-10 w-11 h-11 rounded-full border border-cream/40 items-center justify-center text-cream/80 hover:text-accent hover:border-accent transition-colors">
+    <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="bg-primary text-cream" data-reveal-group>
+  <div class="max-w-container mx-auto px-5 sm:px-8 py-10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+    <div class="reveal">
+      <div class="stat-number font-mono font-bold text-3xl text-accent tracking-tight" data-count="50" data-suffix="+">50+</div>
+      <div class="text-xs sm:text-sm text-cream/80 mt-1">Anni di storia</div>
+    </div>
+    <div class="reveal">
+      <div class="stat-number font-mono font-bold text-3xl text-accent tracking-tight" data-count="4">4</div>
+      <div class="text-xs sm:text-sm text-cream/80 mt-1">Reparti specializzati</div>
+    </div>
+    <div class="reveal">
+      <div class="stat-number font-mono font-bold text-3xl text-accent tracking-tight" data-count="2">2</div>
+      <div class="text-xs sm:text-sm text-cream/80 mt-1">Generazioni in negozio</div>
+    </div>
+    <div class="reveal">
+      <div class="stat-number font-mono font-bold text-3xl text-accent tracking-tight" data-count="1">1</div>
+      <div class="text-xs sm:text-sm text-cream/80 mt-1">Famiglia, sempre presente</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STORIA ============ -->
+<section id="storia" class="relative py-24 sm:py-32 bg-cream overflow-hidden">
+  <div class="max-w-container mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center" data-reveal-group>
+    <div class="reveal order-2 lg:order-1">
+      <p class="section-eyebrow font-semibold tracking-[0.2em] text-accent-dark text-xs uppercase mb-4">La nostra storia<span class="eyebrow-rule"></span></p>
+      <h2 class="font-serif font-bold text-3xl sm:text-4xl text-primary mb-6 leading-tight">Tramandata di padre in figlio, da oltre cinquant'anni.</h2>
+      <div class="space-y-4 text-ink/80 leading-relaxed">
+        <p>Da oltre cinquant'anni, in un angolo di Calabria affacciato sulle colline di Oriolo, la famiglia Acciardi lavora ogni giorno a fianco di chi coltiva la terra e di chi costruisce il proprio futuro.</p>
+        <p>Tutto è cominciato con un piccolo deposito di cereali e mangimi, quando servire bene il paese voleva dire conoscere per nome ogni cliente e ogni campo. Con gli anni l'attività è cresciuta: ai cereali si sono affiancati i fertilizzanti per la cura dei terreni, poi il pellet per riscaldare le case, infine i materiali da costruzione per chi tirava su le mura di casa propria.</p>
+        <p>Quello che non è mai cambiato è il modo di lavorare: la stessa cura, la stessa parola data, lo stesso rispetto per chi arriva chiedendo un consiglio prima ancora che un prodotto. Oggi la <strong class="text-primary">Ditta Acciardi Francesco</strong> porta avanti questa storia tramandata di padre in figlio, con la stessa insegna verde e oro che da generazioni è sinonimo di fiducia a Oriolo e nei paesi vicini.</p>
+      </div>
+
+      <ol class="mt-10 space-y-6 border-l-2 border-accent/40 pl-6">
+        <li class="relative">
+          <span class="timeline-dot absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-accent"></span>
+          <p class="font-semibold text-primary">Gli inizi</p>
+          <p class="text-sm text-ink/70">Un piccolo deposito di cereali e mangimi al servizio delle campagne di Oriolo.</p>
+        </li>
+        <li class="relative">
+          <span class="timeline-dot absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-accent"></span>
+          <p class="font-semibold text-primary">La crescita</p>
+          <p class="text-sm text-ink/70">Arrivano fertilizzanti, pellet e materiali da costruzione: un unico punto di riferimento per il territorio.</p>
+        </li>
+        <li class="relative">
+          <span class="timeline-dot absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-primary"></span>
+          <p class="font-semibold text-primary">Oggi</p>
+          <p class="text-sm text-ink/70">La seconda generazione continua l'attività con la stessa cura di sempre.</p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="reveal illustration-card order-1 lg:order-2">
+      <svg viewBox="0 0 600 640" class="w-full h-auto max-w-md mx-auto" aria-hidden="true">
+        <defs>
+          <radialGradient id="illuBg" cx="35%" cy="25%" r="80%">
+            <stop offset="0%" stop-color="#F7F3EA"/>
+            <stop offset="100%" stop-color="#EFE8D6"/>
+          </radialGradient>
+          <pattern id="illuGrain" width="26" height="26" patternUnits="userSpaceOnUse">
+            <circle cx="3" cy="3" r="1.1" fill="#1A1A18" opacity="0.05"/>
+            <circle cx="16" cy="12" r="1.1" fill="#1A1A18" opacity="0.05"/>
+            <circle cx="9" cy="20" r="1.1" fill="#1A1A18" opacity="0.05"/>
+          </pattern>
+        </defs>
+        <rect x="0" y="0" width="600" height="640" rx="28" fill="url(#illuBg)"/>
+        <rect x="0" y="0" width="600" height="640" rx="28" fill="url(#illuGrain)"/>
+        <circle cx="470" cy="95" r="46" fill="#D6A138" opacity="0.18"/>
+
+        <!-- Crinale lontano con piccoli tetti a "A", eco del logo -->
+        <path d="M0 440 L70 410 L120 428 L190 392 L260 422 L330 398 L400 424 L470 402 L540 426 L600 408 V560 H0 Z" fill="#25543A" opacity="0.12"/>
+        <g fill="none" stroke="#25543A" stroke-width="2.5" opacity="0.35">
+          <path d="M150 400 L165 378 L180 400"/>
+          <path d="M410 396 L425 374 L440 396"/>
+        </g>
+
+        <path d="M60 480 Q 300 400 540 480 V560 H60 Z" fill="#D6A138" opacity="0.25"/>
+        <path d="M60 500 Q 300 430 540 500 V560 H60 Z" fill="#25543A" opacity="0.9"/>
+
+        <!-- Spighe di grano, altezze e inclinazioni variate -->
+        <g stroke="#D6A138" stroke-width="4" stroke-linecap="round">
+          <path d="M120 502 V422 M120 422 l-14 -24 M120 422 l14 -24 M120 452 l-11 -8 M120 468 l11 -8"/>
+          <path d="M168 512 V448 M168 448 l-12 -21 M168 448 l12 -21 M168 472 l-9 -7"/>
+          <path d="M222 500 V408 M222 408 l-15 -26 M222 408 l15 -26 M222 440 l-12 -9 M222 458 l12 -9"/>
+          <path d="M276 514 V452 M276 452 l-11 -19 M276 452 l11 -19 M276 476 l-9 -6"/>
+          <path d="M330 498 V416 M330 416 l-14 -24 M330 416 l14 -24 M330 446 l-11 -8 M330 464 l11 -8"/>
+        </g>
+
+        <circle cx="300" cy="210" r="86" fill="#25543A"/>
+        <circle cx="300" cy="210" r="94" fill="none" stroke="#D6A138" stroke-width="1.5" opacity="0.4"/>
+        <path d="M300 150 L262 268 L282 268 L300 200 Z" fill="#F7F3EA"/>
+        <path d="M300 150 L338 268 L318 268 L300 200 Z" fill="#F7F3EA"/>
+        <rect x="284" y="228" width="32" height="12" rx="3" fill="#D6A138"/>
+        <text x="300" y="330" text-anchor="middle" font-family="Lora, serif" font-weight="700" font-size="26" fill="#25543A">Dal padre</text>
+        <text x="300" y="362" text-anchor="middle" font-family="Lora, serif" font-weight="700" font-size="26" fill="#193A28">al figlio</text>
+
+        <rect x="14" y="14" width="572" height="612" rx="20" fill="none" stroke="#25543A" stroke-width="1" opacity="0.12"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="peak-divider text-cream-alt" aria-hidden="true">
+    <svg viewBox="0 0 1600 60" preserveAspectRatio="none"><path d="M0 60 L80 38 L160 52 L240 20 L320 46 L400 10 L480 40 L560 24 L640 50 L720 15 L800 44 L880 8 L960 42 L1040 22 L1120 50 L1200 18 L1280 46 L1360 12 L1440 40 L1520 26 L1600 48 V60 H0 Z" fill="currentColor"/></svg>
+  </div>
+</section>
+
+<!-- ============ CATALOGO ============ -->
+<section id="catalogo" class="py-24 sm:py-32 bg-cream-alt">
+  <div class="max-w-container mx-auto px-5 sm:px-8">
+    <div class="reveal max-w-2xl mx-auto text-center mb-14">
+      <p class="section-eyebrow font-semibold tracking-[0.2em] text-accent-dark text-xs uppercase mb-4">Il catalogo<span class="eyebrow-rule"></span></p>
+      <h2 class="font-serif font-bold text-3xl sm:text-4xl text-primary mb-5">Tutto per il campo, la stalla, la casa e il cantiere.</h2>
+      <p class="text-ink/70 leading-relaxed">Le categorie qui sotto hanno valore illustrativo: il catalogo completo, con disponibilità e prezzi aggiornati, è consultabile in negozio o richiedendolo direttamente su WhatsApp.</p>
+    </div>
+
+    <div class="cat-list border-t border-ink/15" data-reveal-group="rows">
+
+      <!-- Riga 1 -->
+      <details class="reveal cat-row">
+        <summary class="cat-row-btn group w-full flex items-center gap-5 sm:gap-7 py-7 sm:py-8 text-left list-none cursor-pointer">
+          <span class="cat-index font-mono tabular-nums text-2xl sm:text-3xl text-accent/60 w-9 sm:w-12 shrink-0 ml-2 sm:ml-4">01</span>
+          <span class="cat-icon-mark shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9M12 9l-3-4M12 9l3-4M9 5c0 2 1.5 3 3 3M15 5c0 2-1.5 3-3 3M8 13c0 2 1.5 3 4 3M16 13c0 2-1.5 3-4 3M6 21h12"/></svg>
+          </span>
+          <span class="flex-1">
+            <span class="block font-serif font-semibold text-xl sm:text-2xl text-primary transition-colors group-hover:text-accent-dark">Cereali &amp; Mangimi</span>
+            <span class="block text-sm text-ink/55 mt-0.5">Per campi e allevamento</span>
+          </span>
+          <svg class="cat-chevron w-5 h-5 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="cat-panel-native pl-9 sm:pl-[6.75rem] pt-1 pb-10 flex flex-wrap gap-2">
+            <span class="chip">Cereali da granella</span>
+            <span class="chip">Mangimi zootecnici</span>
+            <span class="chip">Sementi e semine</span>
+          </div>
+      </details>
+
+      <!-- Riga 2 -->
+      <details class="reveal cat-row">
+        <summary class="cat-row-btn group w-full flex items-center gap-5 sm:gap-7 py-7 sm:py-8 text-left list-none cursor-pointer">
+          <span class="cat-index font-mono tabular-nums text-2xl sm:text-3xl text-accent/60 w-9 sm:w-12 shrink-0 ml-2 sm:ml-4">02</span>
+          <span class="cat-icon-mark shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          </span>
+          <span class="flex-1">
+            <span class="block font-serif font-semibold text-xl sm:text-2xl text-primary transition-colors group-hover:text-accent-dark">Agricoltura</span>
+            <span class="block text-sm text-ink/55 mt-0.5">Fertilizzanti, semine e cura del terreno</span>
+          </span>
+          <svg class="cat-chevron w-5 h-5 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="cat-panel-native pl-9 sm:pl-[6.75rem] pt-1 pb-10 flex flex-wrap gap-2">
+            <span class="chip">Concimi chimici</span>
+            <span class="chip">Concimi organici e ammendanti</span>
+            <span class="chip">Prodotti fitosanitari</span>
+            <span class="chip">Diserbanti e anticrittogamici</span>
+            <span class="chip">Terricci e substrati</span>
+            <span class="chip">Sementi da prato e orto</span>
+          </div>
+      </details>
+
+      <!-- Riga 3 -->
+      <details class="reveal cat-row">
+        <summary class="cat-row-btn group w-full flex items-center gap-5 sm:gap-7 py-7 sm:py-8 text-left list-none cursor-pointer">
+          <span class="cat-index font-mono tabular-nums text-2xl sm:text-3xl text-accent/60 w-9 sm:w-12 shrink-0 ml-2 sm:ml-4">03</span>
+          <span class="cat-icon-mark shrink-0 w-14 h-14 rounded-full bg-accent/15 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-accent-dark" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4 0 6.5-2.5 6.5-6 0-3-2-4.8-3-7.5-.6 1.5-1.7 2.3-2.5 2-1-3-1-5.5-1-5.5S9 8 8 12c-.6 2.3-2.5 3-2.5 6 0 3.2 2.5 4 2.5 4"/></svg>
+          </span>
+          <span class="flex-1">
+            <span class="block font-serif font-semibold text-xl sm:text-2xl text-primary transition-colors group-hover:text-accent-dark">Pellet &amp; Riscaldamento</span>
+            <span class="block text-sm text-ink/55 mt-0.5">Per scaldare casa tutto l'inverno</span>
+          </span>
+          <svg class="cat-chevron w-5 h-5 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="cat-panel-native pl-9 sm:pl-[6.75rem] pt-1 pb-10 flex flex-wrap gap-2">
+            <span class="chip">Pellet certificato</span>
+          </div>
+      </details>
+
+      <!-- Riga 4 -->
+      <details class="reveal cat-row">
+        <summary class="cat-row-btn group w-full flex items-center gap-5 sm:gap-7 py-7 sm:py-8 text-left list-none cursor-pointer">
+          <span class="cat-index font-mono tabular-nums text-2xl sm:text-3xl text-accent/60 w-9 sm:w-12 shrink-0 ml-2 sm:ml-4">04</span>
+          <span class="cat-icon-mark shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-5 8 5v12M4 21h16M9 21v-6h6v6M9 12h.01M15 12h.01M12 9h.01"/></svg>
+          </span>
+          <span class="flex-1">
+            <span class="block font-serif font-semibold text-xl sm:text-2xl text-primary transition-colors group-hover:text-accent-dark">Materiali da Costruzione</span>
+            <span class="block text-sm text-ink/55 mt-0.5">Per ogni fase del cantiere</span>
+          </span>
+          <svg class="cat-chevron w-5 h-5 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="cat-panel-native pl-9 sm:pl-[6.75rem] pt-1 pb-10 flex flex-wrap gap-2">
+            <span class="chip">Cemento, calce e leganti</span>
+            <span class="chip">Laterizi e blocchi</span>
+            <span class="chip">Sabbia, ghiaia e inerti</span>
+            <span class="chip">Malte e intonaci premiscelati</span>
+            <span class="chip">Recinzioni e reti</span>
+          </div>
+      </details>
+
+      <!-- Riga 5 -->
+      <details class="reveal cat-row">
+        <summary class="cat-row-btn group w-full flex items-center gap-5 sm:gap-7 py-7 sm:py-8 text-left list-none cursor-pointer">
+          <span class="cat-index font-mono tabular-nums text-2xl sm:text-3xl text-accent/60 w-9 sm:w-12 shrink-0 ml-2 sm:ml-4">05</span>
+          <span class="cat-icon-mark shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15c-2.5 0-4.5 1.8-4.5 4 0 1.1.9 2 2.2 2 1 0 1.8-.5 2.3-.5s1.3.5 2.3.5c1.3 0 2.2-.9 2.2-2 0-2.2-2-4-4.5-4Z"/><circle cx="6.5" cy="10" r="1.7"/><circle cx="10" cy="7" r="1.7"/><circle cx="14" cy="7" r="1.7"/><circle cx="17.5" cy="10" r="1.7"/></svg>
+          </span>
+          <span class="flex-1">
+            <span class="block font-serif font-semibold text-xl sm:text-2xl text-primary transition-colors group-hover:text-accent-dark">Animali da Compagnia</span>
+            <span class="block text-sm text-ink/55 mt-0.5">Cura e alimentazione per i tuoi animali</span>
+          </span>
+          <svg class="cat-chevron w-5 h-5 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="cat-panel-native pl-9 sm:pl-[6.75rem] pt-1 pb-10 flex flex-wrap gap-2">
+            <span class="chip">Antiparassitari</span>
+            <span class="chip">Pasta per cani</span>
+            <span class="chip">Mangimi per animali da compagnia</span>
+          </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ VALORI ============ -->
+<section id="valori" class="py-24 sm:py-32 bg-cream">
+  <div class="max-w-container mx-auto px-5 sm:px-8">
+    <div class="reveal max-w-2xl mx-auto text-center mb-14">
+      <p class="section-eyebrow font-semibold tracking-[0.2em] text-accent-dark text-xs uppercase mb-4">Perché scegliere Acciardi<span class="eyebrow-rule"></span></p>
+      <h2 class="font-serif font-bold text-3xl sm:text-4xl text-primary">Un consiglio prima ancora che un prodotto.</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 lg:gap-x-16 gap-y-12 lg:gap-y-16" data-reveal-group>
+      <div class="reveal value-item border-l-2 border-accent/30 pl-6 sm:pl-8">
+        <div class="flex items-center gap-4 mb-4">
+          <span class="value-index font-serif italic text-2xl text-accent/70">I</span>
+          <span class="value-icon-mark w-14 h-14 shrink-0 rounded-full bg-primary/10 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 2M12 3a9 9 0 1 0 9 9"/><path d="M12 3v3M19 5l-2 2"/></svg>
+          </span>
+        </div>
+        <h3 class="font-serif font-semibold text-xl text-primary mb-2">Esperienza tramandata</h3>
+        <p class="text-sm text-ink/70 leading-relaxed max-w-sm">Più di 50 anni di attività passati di padre in figlio, con la stessa attenzione al dettaglio.</p>
+      </div>
+      <div class="reveal value-item border-l-2 border-accent/30 pl-6 sm:pl-8">
+        <div class="flex items-center gap-4 mb-4">
+          <span class="value-index font-serif italic text-2xl text-accent/70">II</span>
+          <span class="value-icon-mark w-14 h-14 shrink-0 rounded-full bg-primary/10 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h4l2-6 4 12 2-6h4"/></svg>
+          </span>
+        </div>
+        <h3 class="font-serif font-semibold text-xl text-primary mb-2">Consulenza sul campo</h3>
+        <p class="text-sm text-ink/70 leading-relaxed max-w-sm">Un consiglio pratico prima ancora della vendita: conosciamo il terreno e le esigenze reali.</p>
+      </div>
+      <div class="reveal value-item border-l-2 border-accent/30 pl-6 sm:pl-8">
+        <div class="flex items-center gap-4 mb-4">
+          <span class="value-index font-serif italic text-2xl text-accent/70">III</span>
+          <span class="value-icon-mark w-14 h-14 shrink-0 rounded-full bg-primary/10 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7l8-4Z"/></svg>
+          </span>
+        </div>
+        <h3 class="font-serif font-semibold text-xl text-primary mb-2">Prodotti selezionati</h3>
+        <p class="text-sm text-ink/70 leading-relaxed max-w-sm">Cereali, fertilizzanti, pellet e materiali scelti per affidabilità e resa.</p>
+      </div>
+      <div class="reveal value-item border-l-2 border-accent/30 pl-6 sm:pl-8">
+        <div class="flex items-center gap-4 mb-4">
+          <span class="value-index font-serif italic text-2xl text-accent/70">IV</span>
+          <span class="value-icon-mark w-14 h-14 shrink-0 rounded-full bg-primary/10 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5-7-11a7 7 0 1 1 14 0c0 6-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          </span>
+        </div>
+        <h3 class="font-serif font-semibold text-xl text-primary mb-2">Vicinanza al territorio</h3>
+        <p class="text-sm text-ink/70 leading-relaxed max-w-sm">Radicati a Oriolo (CS), al servizio delle campagne e dei cantieri della zona.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="peak-divider text-primary" aria-hidden="true">
+    <svg viewBox="0 0 1600 60" preserveAspectRatio="none"><path d="M0 60 L120 20 L240 48 L360 8 L480 42 L600 26 L720 52 L840 12 L960 44 L1080 24 L1200 50 L1320 16 L1440 46 L1600 30 V60 H0 Z" fill="currentColor"/></svg>
+  </div>
+</section>
+
+<!-- ============ CONTATTI ============ -->
+<section id="contatti" class="relative py-24 sm:py-32 bg-primary text-cream overflow-hidden">
+  <div class="grain-overlay"></div>
+  <div class="relative max-w-container mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-14">
+    <div data-reveal-group>
+      <p class="reveal section-eyebrow font-semibold tracking-[0.2em] text-accent text-xs uppercase mb-4">Contatti<span class="eyebrow-rule"></span></p>
+      <h2 class="reveal font-serif font-bold text-3xl sm:text-4xl mb-8">Passa a trovarci o scrivici, siamo qui.</h2>
+
+      <div class="reveal flex items-start gap-4 mb-6">
+        <span class="shrink-0 w-11 h-11 rounded-xl bg-cream/10 flex items-center justify-center">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5-7-11a7 7 0 1 1 14 0c0 6-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+        </span>
+        <div>
+          <p class="font-semibold">Dove siamo</p>
+          <p class="text-cream/80 text-sm">Oriolo (CS) — Cereali, Fertilizzanti, Materiale da costruzione</p>
+          <a href="https://www.google.com/maps/place/Cereali+-+Fertilizzanti+-+Materiale+da+costruzine./@40.0527584,16.4464951,17z/data=!3m2!1e3!4b1!4m6!3m5!1s0x133f547c0794aab1:0xca159c944c9caa03!8m2!3d40.0527584!4d16.4471388"
+             target="_blank" rel="noopener" class="text-sm text-accent hover:text-accent-light underline underline-offset-2">Apri in Google Maps →</a>
+        </div>
+      </div>
+
+      <div class="reveal flex items-start gap-4 mb-6">
+        <span class="shrink-0 w-11 h-11 rounded-xl bg-cream/10 flex items-center justify-center">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+        </span>
+        <div>
+          <p class="font-semibold">Telefono &amp; WhatsApp</p>
+          <a href="tel:+393475388984" class="block text-cream/80 text-sm hover:text-accent">347 538 8984</a>
+        </div>
+      </div>
+
+      <div class="reveal flex items-start gap-4 mb-9">
+        <span class="shrink-0 w-11 h-11 rounded-xl bg-cream/10 flex items-center justify-center">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </span>
+        <div class="text-sm text-cream/85 leading-relaxed">
+          <p class="font-semibold text-cream mb-1">Orari di apertura</p>
+          <p>Lun–Ven: 7:00–12:30 e 15:00–18:30</p>
+          <p>Sabato: 7:00–12:30</p>
+          <p>Domenica: chiuso</p>
+        </div>
+      </div>
+
+      <a href="https://wa.me/393475388984?text=Ciao%2C%20vorrei%20avere%20informazioni%20sui%20vostri%20prodotti."
+         target="_blank" rel="noopener" class="reveal btn btn-primary">
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.48 1.33 5L2 22l5.15-1.35A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.18a8.14 8.14 0 0 1-4.15-1.14l-.3-.18-3.06.8.82-2.99-.2-.31a8.18 8.18 0 1 1 6.89 3.82Zm4.48-6.13c-.25-.12-1.45-.72-1.67-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.24.25-.4.08-.16.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.66.31-.22.24-.86.85-.86 2.06 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.45-.59 1.65-1.17.21-.57.21-1.06.14-1.16-.06-.11-.23-.17-.48-.29Z"/></svg>
+        Scrivici su WhatsApp
+      </a>
+    </div>
+
+    <div class="reveal space-y-5">
+      <div class="map-card rounded-2xl overflow-hidden shadow-soft border border-cream/10 aspect-[4/3] lg:aspect-auto lg:h-[calc(100%-9.5rem)] min-h-[320px]">
+        <div id="map-placeholder" class="w-full h-full min-h-[320px] flex flex-col items-center justify-center text-center p-8 bg-primary-dark">
+          <svg viewBox="0 0 24 24" class="w-9 h-9 text-cream/50 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5-7-11a7 7 0 1 1 14 0c0 6-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          <p class="text-sm text-cream/80 max-w-xs mb-5">La mappa di Google verrà caricata solo con il tuo consenso ai servizi di terze parti.</p>
+          <button type="button" id="map-consent-btn" class="btn btn-outline text-sm">Carica la mappa</button>
+        </div>
+        <iframe
+          id="map-iframe"
+          class="map-frame hidden w-full h-full min-h-[320px]"
+          data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160000!2d15.027033589032607!3d39.80568696666108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133f547c0794aab1%3A0xca159c944c9caa03!2sCereali%20-%20Fertilizzanti%20-%20Materiale%20da%20costruzine.!5e0!3m2!1sit!2sit!4v1785420751562!5m2!1sit!2sit"
+          title="Posizione Acciardi su Google Maps"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          style="border:0;">
+        </iframe>
+      </div>
+
+      <div class="review-card rounded-2xl border border-cream/10 bg-cream/10 p-6 sm:p-7">
+        <div class="flex gap-1 mb-3" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="w-4 h-4 text-accent" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.2 21 L12 17.3 L5.8 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
+          <svg viewBox="0 0 24 24" class="w-4 h-4 text-accent" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.2 21 L12 17.3 L5.8 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
+          <svg viewBox="0 0 24 24" class="w-4 h-4 text-accent" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.2 21 L12 17.3 L5.8 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
+          <svg viewBox="0 0 24 24" class="w-4 h-4 text-accent" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.2 21 L12 17.3 L5.8 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
+          <svg viewBox="0 0 24 24" class="w-4 h-4 text-accent" fill="currentColor"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.2 21 L12 17.3 L5.8 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
+        </div>
+        <p class="font-serif font-semibold text-lg text-cream mb-1">Ti sei trovato bene da noi?</p>
+        <p class="text-sm text-cream/75 mb-5 leading-relaxed">Raccontalo con una recensione su Google: ci aiuta a farci conoscere da altri clienti della zona.</p>
+
+        <button type="button" id="review-toggle-btn" aria-expanded="false" aria-controls="review-form" class="btn btn-outline text-sm w-full sm:w-auto">
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.2 21 L12 17.3 L5.8 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
+          Scrivi una recensione
+        </button>
+
+        <div id="review-form" class="review-form" hidden>
+          <label for="review-text" class="block text-xs text-cream/60 mt-4 mb-2">Scrivi qui la tua recensione: la copiamo per te, dovrai solo incollarla nella pagina di Google che si apre.</label>
+          <textarea id="review-text" class="review-textarea" rows="4" placeholder="Es. Personale gentile e disponibile, prodotti di qualità, consiglio!"></textarea>
+          <button type="button" id="review-send-btn" class="btn btn-primary text-sm w-full mt-3">
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copia e apri Google
+          </button>
+          <p id="review-copied-msg" class="text-xs text-accent mt-2" hidden>Testo copiato! Incollalo nella pagina che si è appena aperta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-primary-dark text-cream/80">
+  <div class="max-w-container mx-auto px-5 sm:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <a href="#hero" class="flex items-center gap-3 mb-4">
+        <svg viewBox="0 0 200 200" class="w-8 h-8" aria-hidden="true">
+          <path d="M100 20 L55 180 L80 180 L100 74 Z" fill="#FFFFFF"/>
+          <path d="M100 20 L145 180 L120 180 L100 74 Z" fill="#FFFFFF"/>
+          <rect x="76" y="108" width="48" height="17" rx="4" fill="#D6A138"/>
+        </svg>
+        <span class="font-serif font-bold text-lg text-cream">ACCIARDI</span>
+      </a>
+      <p class="text-sm leading-relaxed">Cereali · Fertilizzanti · Materiali da Costruzione<br>Oriolo (CS) — una tradizione di famiglia da oltre 50 anni.</p>
+    </div>
+    <div>
+      <p class="font-semibold text-cream mb-4 text-sm uppercase tracking-wide">Naviga</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#storia" class="hover:text-accent">La storia</a></li>
+        <li><a href="#catalogo" class="hover:text-accent">Catalogo</a></li>
+        <li><a href="#valori" class="hover:text-accent">Perché noi</a></li>
+        <li><a href="#contatti" class="hover:text-accent">Contatti</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-semibold text-cream mb-4 text-sm uppercase tracking-wide">Orari</p>
+      <ul class="space-y-2 text-sm">
+        <li>Lun–Ven: 7:00–12:30 / 15:00–18:30</li>
+        <li>Sabato: 7:00–12:30</li>
+        <li>Domenica: chiuso</li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-semibold text-cream mb-4 text-sm uppercase tracking-wide">Contatti</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="tel:+393475388984" class="hover:text-accent">347 538 8984</a></li>
+        <li><a href="https://wa.me/393475388984" target="_blank" rel="noopener" class="hover:text-accent">WhatsApp</a></li>
+        <li>Oriolo (CS)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-cream/10">
+    <div class="max-w-container mx-auto px-5 sm:px-8 py-6 text-xs text-cream/50 flex flex-col sm:flex-row gap-2 justify-between">
+      <p>© <span id="year"></span> Ditta Acciardi Francesco. Tutti i diritti riservati.</p>
+      <p class="flex gap-4">
+        <button type="button" id="cookie-policy-link" class="underline underline-offset-2 hover:text-accent">Informativa cookie</button>
+        <button type="button" id="cookie-reopen" class="underline underline-offset-2 hover:text-accent">Preferenze cookie</button>
+      </p>
+      <p>Oriolo (CS)</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP (desktop/tablet, lg+) ============ -->
+<div id="wa-widget" class="wa-widget hidden lg:block">
+  <div id="wa-popup" class="wa-popup" role="dialog" aria-modal="false" aria-label="Scrivi un messaggio WhatsApp">
+    <button type="button" id="wa-popup-close" class="wa-popup-close" aria-label="Chiudi">
+      <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <p class="wa-popup-title">Scrivici su WhatsApp</p>
+    <p class="wa-popup-desc">Scrivi il tuo messaggio: si aprirà già pronto su WhatsApp.</p>
+    <textarea id="wa-popup-text" class="wa-popup-textarea" rows="3" maxlength="500">Ciao, vorrei avere informazioni sui vostri prodotti.</textarea>
+    <button type="button" id="wa-popup-send" class="btn btn-primary wa-popup-send-btn">
+      <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.48 1.33 5L2 22l5.15-1.35A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.18a8.14 8.14 0 0 1-4.15-1.14l-.3-.18-3.06.8.82-2.99-.2-.31a8.18 8.18 0 1 1 6.89 3.82Zm4.48-6.13c-.25-.12-1.45-.72-1.67-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.24.25-.4.08-.16.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.66.31-.22.24-.86.85-.86 2.06 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.45-.59 1.65-1.17.21-.57.21-1.06.14-1.16-.06-.11-.23-.17-.48-.29Z"/></svg>
+      Invia su WhatsApp
+    </button>
+  </div>
+  <button type="button" id="wa-float-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="wa-popup" aria-label="Scrivici su WhatsApp"
+     class="wa-float flex w-14 h-14 rounded-full bg-primary text-cream items-center justify-center shadow-soft hover:bg-primary-dark transition-colors">
+    <svg viewBox="0 0 24 24" class="w-7 h-7" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.48 1.33 5L2 22l5.15-1.35A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.18a8.14 8.14 0 0 1-4.15-1.14l-.3-.18-3.06.8.82-2.99-.2-.31a8.18 8.18 0 1 1 6.89 3.82Zm4.48-6.13c-.25-.12-1.45-.72-1.67-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.24.25-.4.08-.16.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.66.31-.22.24-.86.85-.86 2.06 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.45-.59 1.65-1.17.21-.57.21-1.06.14-1.16-.06-.11-.23-.17-.48-.29Z"/></svg>
+  </button>
+</div>
+
+<!-- ============ BARRA AZIONI FISSA (solo mobile/tablet, sotto lg) ============ -->
+<div class="mobile-action-bar flex lg:hidden" role="navigation" aria-label="Azioni rapide">
+  <a href="tel:+393475388984" class="mobile-action-btn mobile-action-call">
+    <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+    Chiama
+  </a>
+  <a href="https://wa.me/393475388984?text=Ciao%2C%20vorrei%20avere%20informazioni%20sui%20vostri%20prodotti."
+     target="_blank" rel="noopener" class="mobile-action-btn mobile-action-whatsapp">
+    <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.48 1.33 5L2 22l5.15-1.35A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.18a8.14 8.14 0 0 1-4.15-1.14l-.3-.18-3.06.8.82-2.99-.2-.31a8.18 8.18 0 1 1 6.89 3.82Zm4.48-6.13c-.25-.12-1.45-.72-1.67-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.24.25-.4.08-.16.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.66.31-.22.24-.86.85-.86 2.06 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.45-.59 1.65-1.17.21-.57.21-1.06.14-1.16-.06-.11-.23-.17-.48-.29Z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<!-- ============ COOKIE BANNER ============ -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-modal="false" aria-live="polite" aria-label="Preferenze sui cookie" hidden>
+  <div class="cookie-banner-inner">
+    <div class="cookie-banner-text">
+      <p class="cookie-banner-title font-serif">Rispettiamo la tua privacy</p>
+      <p class="cookie-banner-desc">Usiamo cookie tecnici necessari al funzionamento del sito e, solo con il tuo consenso, servizi di terze parti (Google Maps per la mappa e Google Fonts per i caratteri) che caricano risorse dai server di Google. Puoi accettare, rifiutare o personalizzare la tua scelta in qualsiasi momento. <button type="button" id="cookie-policy-link-banner" class="cookie-link">Leggi l'informativa completa</button>.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button type="button" id="cookie-customize" class="btn btn-cookie-ghost">Personalizza</button>
+      <button type="button" id="cookie-reject" class="btn btn-cookie-outline">Rifiuta</button>
+      <button type="button" id="cookie-accept" class="btn btn-primary">Accetta tutti</button>
+    </div>
+  </div>
+
+  <div id="cookie-preferences" class="cookie-preferences" hidden>
+    <div class="cookie-pref-row">
+      <div>
+        <p class="cookie-pref-title">Necessari</p>
+        <p class="cookie-pref-desc">Indispensabili al funzionamento del sito, ad esempio per ricordare questa scelta. Sempre attivi.</p>
+      </div>
+      <span class="cookie-toggle cookie-toggle-locked" aria-hidden="true"><span class="cookie-toggle-dot"></span></span>
+    </div>
+    <div class="cookie-pref-row">
+      <div>
+        <p class="cookie-pref-title">Servizi di terze parti</p>
+        <p class="cookie-pref-desc">Google Maps (mappa interattiva della sede) e Google Fonts (caratteri tipografici). Attivandoli, Google potrebbe impostare propri cookie.</p>
+      </div>
+      <button type="button" id="cookie-toggle-third-party" class="cookie-toggle" role="switch" aria-checked="false" aria-label="Attiva servizi di terze parti"><span class="cookie-toggle-dot"></span></button>
+    </div>
+    <div class="cookie-preferences-actions">
+      <button type="button" id="cookie-save" class="btn btn-primary text-sm">Salva preferenze</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODALE INFORMATIVA COOKIE ============ -->
+<div id="cookie-policy-modal" class="cookie-modal-overlay" hidden>
+  <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-policy-title">
+    <button type="button" id="cookie-policy-close" class="cookie-modal-close" aria-label="Chiudi">
+      <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <h2 id="cookie-policy-title" class="font-serif font-bold text-2xl text-primary mb-4">Informativa sui cookie</h2>
+    <div class="cookie-modal-body">
+      <p><strong>Titolare del trattamento:</strong> Ditta Acciardi Francesco, Oriolo (CS).</p>
+      <p><strong>Cookie tecnici necessari</strong><br>Indispensabili al funzionamento del sito, ad esempio per memorizzare la scelta fatta in questo banner. Non richiedono consenso e non possono essere disattivati.</p>
+      <p><strong>Servizi di terze parti (attivati solo con il tuo consenso)</strong></p>
+      <ul>
+        <li><strong>Google Maps</strong> (Google LLC) — mostra la mappa con la posizione del negozio. Se attivato, Google può impostare propri cookie e ricevere il tuo indirizzo IP. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Informativa privacy di Google</a>.</li>
+        <li><strong>Google Fonts</strong> (Google LLC) — carica i caratteri tipografici del sito dai server di Google.</li>
+      </ul>
+      <p>Puoi modificare la tua scelta in qualsiasi momento tramite il link "Preferenze cookie" nel footer del sito.</p>
+      <p class="text-xs text-ink/50">Questa informativa ha scopo puramente informativo e non sostituisce una consulenza legale professionale.</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js?v=7"></script>
+</body>
+</html>
