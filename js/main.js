@@ -195,10 +195,10 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   widget.addEventListener('mouseenter', openPopup);
   widget.addEventListener('mouseleave', scheduleClose);
 
-  floatBtn.addEventListener('click', () => {
-    if (widget.classList.contains('is-open')) closePopup();
-    else openPopup();
-  });
+  /* Solo apertura, mai toggle: con il mouse l'hover apre già il popup prima ancora del
+     click, quindi un click che "chiudesse se già aperto" lo richiuderebbe subito dopo
+     essersi aperto per l'hover. Chi vuole chiuderlo ha la X, il click fuori o Esc. */
+  floatBtn.addEventListener('click', openPopup);
   closeBtn.addEventListener('click', closePopup);
 
   document.addEventListener('click', (e) => {
@@ -328,6 +328,18 @@ initCounters();
   const saveBtn = document.getElementById('cookie-save');
   const reopenBtn = document.getElementById('cookie-reopen');
   const mapConsentBtn = document.getElementById('map-consent-btn');
+
+  /* Il banner cookie, fisso in basso, altrimenti coprirebbe (e bloccherebbe i click su)
+     il bottone WhatsApp flottante e la barra chiama/whatsapp mobile, anch'essi fissi in
+     basso: si aggiorna una variabile CSS con l'altezza reale del banner, così i due
+     restano sempre sopra di esso, qualunque sia la sua altezza (cambia ad es. aprendo le
+     preferenze cookie o al ridimensionamento della finestra). */
+  if (banner && 'ResizeObserver' in window) {
+    const updateBannerOffset = () => {
+      document.documentElement.style.setProperty('--cookie-banner-h', banner.offsetHeight + 'px');
+    };
+    new ResizeObserver(updateBannerOffset).observe(banner);
+  }
 
   function syncToggleWithStoredState() {
     if (!toggle) return;
