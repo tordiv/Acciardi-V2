@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dittaacciardi.it/sitemap.xml
+Sitemap: https://www.dittaacciardi.it/sitemap.xml
