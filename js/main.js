@@ -314,9 +314,26 @@ initCounters();
     if (placeholder) placeholder.classList.add('hidden');
   }
 
+  function loadGoogleAnalytics() {
+    if (document.getElementById('ga-gtag-script')) return;
+    const script = document.createElement('script');
+    script.id = 'ga-gtag-script';
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-1LTWV90XFD';
+    document.head.appendChild(script);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-1LTWV90XFD');
+  }
+
   function enableThirdParty() {
     loadGoogleFonts();
     loadMap();
+    loadGoogleAnalytics();
   }
 
   const banner = document.getElementById('cookie-banner');

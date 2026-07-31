@@ -45,9 +45,11 @@
 }
 </script>
 
-<!-- Google Fonts NON caricato staticamente: viene iniettato via JS solo dopo il consenso ai
-     servizi di terze parti (vedi cookie banner). Prima del consenso si usano i font di sistema
-     già previsti come fallback in tailwind.config (vedi <script> più in basso). -->
+<!-- Google Fonts e Google Analytics NON caricati staticamente: vengono iniettati via JS solo
+     dopo il consenso ai servizi di terze parti (vedi cookie banner e loadGoogleFonts /
+     loadGoogleAnalytics in js/main.js). Prima del consenso si usano i font di sistema già
+     previsti come fallback in tailwind.config (vedi <script> più in basso), e nessuna
+     statistica viene raccolta. -->
 
 <!-- Open Graph -->
 <meta property="og:title" content="Acciardi — Oriolo (CS)">
@@ -676,7 +678,7 @@
   <div class="cookie-banner-inner">
     <div class="cookie-banner-text">
       <p class="cookie-banner-title font-serif">Rispettiamo la tua privacy</p>
-      <p class="cookie-banner-desc">Usiamo cookie tecnici necessari al funzionamento del sito e, solo con il tuo consenso, servizi di terze parti (Google Maps per la mappa e Google Fonts per i caratteri) che caricano risorse dai server di Google. Puoi accettare, rifiutare o personalizzare la tua scelta in qualsiasi momento. <button type="button" id="cookie-policy-link-banner" class="cookie-link">Leggi l'informativa completa</button>.</p>
+      <p class="cookie-banner-desc">Usiamo cookie tecnici necessari al funzionamento del sito e, solo con il tuo consenso, servizi di terze parti (Google Maps per la mappa, Google Fonts per i caratteri e Google Analytics per statistiche di visita anonime) che caricano risorse dai server di Google. Puoi accettare, rifiutare o personalizzare la tua scelta in qualsiasi momento. <button type="button" id="cookie-policy-link-banner" class="cookie-link">Leggi l'informativa completa</button>.</p>
     </div>
     <div class="cookie-banner-actions">
       <button type="button" id="cookie-customize" class="btn btn-cookie-ghost">Personalizza</button>
@@ -696,7 +698,7 @@
     <div class="cookie-pref-row">
       <div>
         <p class="cookie-pref-title">Servizi di terze parti</p>
-        <p class="cookie-pref-desc">Google Maps (mappa interattiva della sede) e Google Fonts (caratteri tipografici). Attivandoli, Google potrebbe impostare propri cookie.</p>
+        <p class="cookie-pref-desc">Google Maps (mappa interattiva della sede), Google Fonts (caratteri tipografici) e Google Analytics (statistiche di visita anonime). Attivandoli, Google potrebbe impostare propri cookie.</p>
       </div>
       <button type="button" id="cookie-toggle-third-party" class="cookie-toggle" role="switch" aria-checked="false" aria-label="Attiva servizi di terze parti"><span class="cookie-toggle-dot"></span></button>
     </div>
@@ -720,6 +722,7 @@
       <ul>
         <li><strong>Google Maps</strong> (Google LLC) — mostra la mappa con la posizione del negozio. Se attivato, Google può impostare propri cookie e ricevere il tuo indirizzo IP. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Informativa privacy di Google</a>.</li>
         <li><strong>Google Fonts</strong> (Google LLC) — carica i caratteri tipografici del sito dai server di Google.</li>
+        <li><strong>Google Analytics</strong> (Google LLC) — raccoglie statistiche anonime su come viene usato il sito (pagine visitate, provenienza dei visitatori), per capire come migliorarlo. Se attivato, Google può impostare propri cookie e ricevere il tuo indirizzo IP. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Informativa privacy di Google</a>.</li>
       </ul>
       <p>Puoi modificare la tua scelta in qualsiasi momento tramite il link "Preferenze cookie" nel footer del sito.</p>
       <p class="text-xs text-ink/50">Questa informativa ha scopo puramente informativo e non sostituisce una consulenza legale professionale.</p>
@@ -729,6 +732,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="js/main.js?v=10"></script>
+<script src="js/main.js?v=11"></script>
 </body>
 </html>
