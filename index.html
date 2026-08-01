@@ -20,27 +20,36 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Store",
-  "name": "Ditta Acciardi Francesco",
-  "description": "Cereali, fertilizzanti, pellet e materiali da costruzione a Oriolo (CS). Attività di famiglia da oltre 50 anni, tramandata di padre in figlio.",
-  "url": "https://www.dittaacciardi.it/",
-  "telephone": "+393475388984",
-  "priceRange": "€€",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Oriolo",
-    "addressRegion": "CS",
-    "addressCountry": "IT"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 40.0527584,
-    "longitude": 16.4471388
-  },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "12:30" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "15:00", "closes": "18:30" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "07:00", "closes": "12:30" }
+  "@graph": [
+    {
+      "@type": "Store",
+      "name": "Ditta Acciardi Francesco",
+      "description": "Cereali, fertilizzanti, pellet e materiali da costruzione a Oriolo (CS). Attività di famiglia da oltre 50 anni, tramandata di padre in figlio.",
+      "url": "https://www.dittaacciardi.it/",
+      "telephone": "+393475388984",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oriolo",
+        "addressRegion": "CS",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.0527584,
+        "longitude": 16.4471388
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "12:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "15:00", "closes": "18:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "07:00", "closes": "12:30" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "Ditta Acciardi Francesco - Oriolo",
+      "url": "https://www.dittaacciardi.it/"
+    }
   ]
 }
 </script>
