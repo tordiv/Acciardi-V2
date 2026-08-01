@@ -2,6 +2,20 @@ document.documentElement.classList.add('js');
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+/* ---------- Tracciamento eventi GA4 (no-op finché l'utente non acconsente ai cookie di terze parti,
+   perché gtag viene definito solo a quel punto: vedi cookieConsent > loadGoogleAnalytics) ---------- */
+function trackEvent(name, params) {
+  if (typeof window.gtag === 'function') window.gtag('event', name, params);
+}
+
+/* ---------- Click su "Chiama" e "WhatsApp": eventi personalizzati per Google Analytics
+   (copre tutti i pulsanti/link statici: header, menu mobile, barra azioni mobile, sezione contatti, footer) ---------- */
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href^="tel:"], a[href*="wa.me"]');
+  if (!link) return;
+  trackEvent(link.href.startsWith('tel:') ? 'click_chiama' : 'click_whatsapp');
+});
+
 /* ---------- Mobile menu ---------- */
 const menuBtn = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -211,6 +225,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   function sendMessage() {
     const message = textarea.value.trim() || DEFAULT_MESSAGE;
     const url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(message);
+    trackEvent('click_whatsapp');
     window.open(url, '_blank', 'noopener');
     closePopup();
   }
